@@ -1,0 +1,31 @@
+.variant__small[type='button'] {
+  @apply px-3 py-2 text-xs;
+}
+
+.variant__medium[type='button'] {
+  @apply px-7 py-2;
+}
+
+.variant__large[type='button'] {
+  @apply px-7 py-4;
+}
+
+.button__primary[type='button'] {
+  @apply bg-primary text-white;
+}
+
+.button__outline[type='button'] {
+  @apply bg-transparent border border-white text-white;
+}
+
+.button__outline-primary[type='button'] {
+  @apply bg-transparent border border-primary text-primary;
+}
+
+.button__none[type='button'] {
+  @apply text-primary outline-none;
+}
+
+.button__disabled[type='button'] {
+  @apply bg-[#E0E0E0] text-[#757575];
+}
