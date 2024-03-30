@@ -13,8 +13,8 @@ const Spinner = (props: Props) => {
       role='status'
       className={cx(`${props.width}
         ${props.height}
-        text-gray-200
         animate-spin
+        text-gray-200
         dark:text-gray-600
         ${props.color}`)}
       viewBox='0 0 100 101'

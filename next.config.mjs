@@ -2,9 +2,9 @@
 const nextConfig = {
   reactStrictMode: true,
   typescript: {
-    ignoreBuildErrors: true,
+    ignoreBuildErrors: true
   },
-  output: "standalone",
-};
+  output: 'standalone'
+}
 
-export default nextConfig;
+export default nextConfig

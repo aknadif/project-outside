@@ -1,6 +1,6 @@
 import type {NextPage} from 'next'
 
-import PrivacyPoliciesPage from '@/screens/privacyPolicies';
+import PrivacyPoliciesPage from '@/screens/privacyPolicies'
 
 const Home: NextPage = () => {
   return (
@@ -10,5 +10,4 @@ const Home: NextPage = () => {
   )
 }
 
-
-export default Home;
+export default Home

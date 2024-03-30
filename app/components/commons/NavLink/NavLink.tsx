@@ -19,8 +19,8 @@ const NavLink = ({href, children, onClick, customClassName}: INavLink) => {
       scroll={false}
       onClick={onClick}
       className={cx(
-        'hover:text-primary hover:underline underline-offset-8 decoration-2',
-        asPath === href ? 'text-primary font-extrabold' : '',
+        'text-black decoration-2 underline-offset-8 hover:text-primary hover:underline',
+        asPath === href ? 'font-extrabold text-primary' : '',
         customClassName
       )}
     >

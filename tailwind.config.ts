@@ -8,25 +8,22 @@ const config: Config = {
       sans: ['Plus Jakarta Sans', ...defaultTheme.fontFamily.sans]
     },
     extend: {
-      backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))'
-      },
       colors: {
         transparent: 'transparent',
         current: 'currentColor',
         white: '#ffffff',
-        purple: '#3f3cbb',
-        midnight: '#121063',
-        metal: '#565584',
-        primary: '#3ab7bf',
-        silver: '#ecebff',
-        'bubble-gum': '#ff77e9',
-        bermuda: '#78dcca'
+        primary: '#d4a373',
+        secondary: '#e9edc9',
+        black: '#001219'
+      },
+      screens: {
+        '2lg': '1380px',
+        '2xl': '1440px',
+        '3xl': '1920px',
+        '4xl': '2560px'
       }
     }
   },
-  plugins: [require('@tailwindcss/line-clamp')]
 }
 
 export default config

@@ -1,3 +1,5 @@
 import HomeSlider from './HomeSlider'
+import About from './About'
+import Product from './Product'
 
-export default HomeSlider
+export {HomeSlider, About, Product}
