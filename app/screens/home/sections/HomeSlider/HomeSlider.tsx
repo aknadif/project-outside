@@ -1,10 +1,10 @@
 import React from 'react'
 import cx from 'classnames'
-import Image from 'next/image'
 import {Autoplay, Navigation} from 'swiper/modules'
 import {Swiper, SwiperSlide} from 'swiper/react'
 import {HiChevronRight, HiChevronLeft} from 'react-icons/hi2'
 
+import {CustomImage} from '@/app/components/commons'
 import styles from './HomeSlider.module.css'
 import {ICHomeSlider1, ICHomeSlider2, ICHomeSlider3} from '@/app/assets/images'
 import useWindowDimensions from '@/app/hooks/useWindowDimension'
@@ -47,13 +47,12 @@ const HomeSlider = () => {
         nextEl: '.next-button',
         prevEl: '.previous-button'
       }}
-      id='home-slider'
     >
       {listDataCourosal.map((item) => {
         return (
           <SwiperSlide key={item.id}>
             <div className={cx('relative h-[570px] overflow-hidden', 'md:flex md:h-[510px]', 'xl:h-[89vh]')}>
-              <Image src={item.src} alt={item.title} loading={'lazy'} />
+              <CustomImage src={item.src} alt={item.title} />
             </div>
           </SwiperSlide>
         )
