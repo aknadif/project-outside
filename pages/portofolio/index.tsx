@@ -1,11 +1,11 @@
 import type {NextPage} from 'next'
 
-import PrivacyPoliciesPage from '@/screens/privacyPolicies'
+import PortofolioPage from '@/app/screens/portofolio'
 
 const Home: NextPage = () => {
   return (
     <div>
-      <PrivacyPoliciesPage />
+      <PortofolioPage />
     </div>
   )
 }

@@ -6,7 +6,7 @@ type Props = {
 }
 
 const Card = (props: Props) => {
-  return <div class='max-w-sm rounded-lg border border-gray-200 bg-white shadow'>{props.children}</div>
+  return <div className={cx('max-w-sm rounded-lg border border-gray-200 bg-white shadow')}>{props.children}</div>
 }
 
 Card.defaultProps = {

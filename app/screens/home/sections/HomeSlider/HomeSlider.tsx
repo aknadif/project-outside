@@ -40,7 +40,7 @@ const HomeSlider = () => {
     <Swiper
       modules={[Navigation, Autoplay]}
       autoplay={{delay: 3000}}
-      className='mySwiper'
+      className={cx('mySwiper')}
       loop={true}
       speed={500}
       navigation={{

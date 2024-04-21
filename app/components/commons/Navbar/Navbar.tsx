@@ -66,7 +66,7 @@ const Navbar = () => {
                 key={menu.id}
                 href={menu.href}
                 onClick={() => setIsOpenMenu(false)}
-                customClassName='w-full border-b border-[#B7A4FF] py-4 first:-mt-4'
+                customClassName={cx('w-full border-b border-[#B7A4FF] py-4 first:-mt-4')}
               >
                 {menu.text}
               </NavLink>
