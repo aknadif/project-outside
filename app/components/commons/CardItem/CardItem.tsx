@@ -8,28 +8,23 @@ type Props = {
   alt: string
 }
 
-const CardItem = ({position, src, alt}: Props) => {
+const CardItem = ({position = 'vertical', src = '', alt = ''}: Props) => {
   return (
     <Card>
       {position === 'vertical' ? (
-        <>
-          <a href='#'>
-            <CustomImage className={cx('rounded-t-lg')} src={src} alt={alt} />
-          </a>
+        <div className={cx('overflow-hidden rounded-t-lg')}>
+          <CustomImage src={src} alt={alt} />
           <div className={cx('p-5')}>
-            <a href='#'>
-              <h5 className={cx('mb-2 text-lg font-bold tracking-tight text-black')}>
-                Noteworthy technology acquisitions 2021
-              </h5>
-            </a>
+            <h5 className={cx('mb-2 text-lg font-bold tracking-tight text-black')}>
+              Noteworthy technology acquisitions 2021
+            </h5>
             <p className={cx('mb-3 text-sm font-normal text-black/70')}>
               Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.
             </p>
           </div>
-        </>
+        </div>
       ) : (
-        <a
-          href='#'
+        <div
           className={cx(
             'flex flex-col items-center rounded-lg border border-gray-200 bg-white shadow hover:bg-gray-100 md:max-w-xl md:flex-row'
           )}
@@ -50,16 +45,10 @@ const CardItem = ({position, src, alt}: Props) => {
               Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.
             </p>
           </div>
-        </a>
+        </div>
       )}
     </Card>
   )
-}
-
-CardItem.defaultProps = {
-  position: 'vertical',
-  src: '',
-  alt: ''
 }
 
 export default CardItem

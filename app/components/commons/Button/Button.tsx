@@ -14,6 +14,7 @@ type IButton = {
   onClick: React.MouseEventHandler<HTMLButtonElement>
   customClassName?: string
   isLoading: boolean
+  rounded: boolean
 }
 
 const Button = ({
@@ -24,7 +25,8 @@ const Button = ({
   type = 'button',
   variant = 'medium',
   isDisabled = false,
-  isLoading = false
+  isLoading = false,
+  isRounded = true
 }: IButton) => {
   const buttonClassType = isDisabled ? 'disabled' : classType
 
@@ -32,7 +34,12 @@ const Button = ({
     <button
       disabled={isDisabled}
       type={type}
-      className={cx('rounded-full', `variant__${variant}`, `button__${buttonClassType}`, customClassName)}
+      className={cx(
+        isRounded ? 'rounded-full' : 'rounded-none',
+        `variant__${variant}`,
+        `button__${buttonClassType}`,
+        customClassName
+      )}
       onClick={onClick}
     >
       {isLoading && (
@@ -43,10 +50,6 @@ const Button = ({
       {!isLoading && children}
     </button>
   )
-}
-
-Button.defaultProps = {
-  isLoading: false
 }
 
 export default Button

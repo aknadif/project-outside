@@ -5,12 +5,8 @@ type Props = {
   children: React.ReactNode
 }
 
-const Card = (props: Props) => {
-  return <div className={cx('max-w-sm rounded-lg border border-gray-200 bg-white shadow')}>{props.children}</div>
-}
-
-Card.defaultProps = {
-  children: ''
+const Card = ({children = ''}: Props) => {
+  return <div className={cx('max-w-sm rounded-lg border border-gray-200 bg-white shadow')}>{children}</div>
 }
 
 export default Card

@@ -9,10 +9,10 @@ import {Button, NavLink} from '@/app/components/commons'
 import {ICClose, ICHamburgerMenu} from '@/app/assets/images'
 
 const listNavbarMenu = [
-  {id: 1, text: 'Home', href: '#home-slider'},
-  {id: 3, text: 'About', href: '#about-us'},
-  {id: 4, text: 'Product', href: '#our-product'},
-  {id: 2, text: 'Portofolio', href: '#portofolio'}
+  {id: 1, text: 'Home', href: '/'},
+  {id: 3, text: 'About', href: '/about-us'},
+  {id: 4, text: 'Product', href: '/our-product'},
+  {id: 2, text: 'Portofolio', href: '/portofolio'}
 ]
 
 const Navbar = () => {

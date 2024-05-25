@@ -6,15 +6,11 @@ type Props = {
   alt: string
   width: number
   height: number
+  className: string
 }
 
-const CustomImage = (props: Props) => {
-  return <Image src={props.src} alt={props.alt} width={props.width} height={props.height} loading={'lazy'} />
-}
-
-CustomImage.defaultProps = {
-  src: '',
-  alt: 'image'
+const CustomImage = ({width, height, src = '', alt = 'image', className}: Props) => {
+  return <Image src={src} alt={alt} width={width} height={height} loading={'lazy'} className={className} />
 }
 
 export default CustomImage

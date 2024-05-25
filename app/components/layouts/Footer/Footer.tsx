@@ -52,7 +52,7 @@ const Footer = () => {
             {listNavbarMenu.map((item, index) => {
               return (
                 <li key={index} className={cx('pt-1')}>
-                  <NavLink href={item.href} customClassName={cx('text-xs decoration-0')}>
+                  <NavLink key={index} href={item.href} customClassName={cx('text-xs decoration-0')}>
                     {item.text}
                   </NavLink>
                 </li>

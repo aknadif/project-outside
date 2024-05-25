@@ -14,6 +14,10 @@
   @apply bg-primary text-white;
 }
 
+.button__primary[type='button']:hover {
+  @apply bg-primary/80 text-white;
+}
+
 .button__outline[type='button'] {
   @apply border border-white bg-transparent text-white;
 }

@@ -5,11 +5,11 @@ import {Swiper, SwiperSlide} from 'swiper/react'
 import {HiChevronRight, HiChevronLeft} from 'react-icons/hi2'
 
 import {CustomImage} from '@/app/components/commons'
-import styles from './HomeSlider.module.css'
+import styles from './ProductSlider.module.css'
 import {ICHomeSlider1, ICHomeSlider2, ICHomeSlider3} from '@/app/assets/images'
 import useWindowDimensions from '@/app/hooks/useWindowDimension'
 
-const HomeSlider = () => {
+const ProductSlider = () => {
   const [widthDimension, setWidthDimension] = React.useState(0)
   if (typeof window !== 'undefined') {
     const dimensions = useWindowDimensions()
@@ -21,20 +21,17 @@ const HomeSlider = () => {
   const listDataCourosal = [
     {
       id: 1,
-      title: "Embrace nature's bounty at our farm",
-      tagline: 'Fresh, Fun, Unforgettable!',
+      title: 'Slide 1',
       src: ICHomeSlider1
     },
     {
       id: 2,
-      title: 'Discover the essence of farm life',
-      tagline: 'Genuine, Thrilling, Forever Memories!',
+      title: 'Slide 2',
       src: ICHomeSlider2
     },
     {
       id: 3,
-      title: 'Rooted in nature, blossoming with joy',
-      tagline: 'Authentic, Exciting, Timeless!',
+      title: 'Slide 3',
       src: ICHomeSlider3
     }
   ]
@@ -54,12 +51,8 @@ const HomeSlider = () => {
       {listDataCourosal.map((item) => {
         return (
           <SwiperSlide key={item.id}>
-            <div className={cx('relative h-[570px] overflow-hidden', 'md:flex md:h-[510px]', 'xl:h-[80vh]')}>
-              <div className={cx('brightness-50')}>
-                <CustomImage src={item.src} alt={item.title} className={cx('!h-[500px] object-cover md:h-auto')} />
-              </div>
-              <h1 className={cx('absolute right-[15%] top-[25%] text-6xl font-bold text-white')}>{item.title}</h1>
-              <h4 className={cx('absolute right-[15%] top-[36%] text-xl font-bold text-white')}>{item.tagline}</h4>
+            <div className={cx('relative h-[570px] overflow-hidden', 'md:flex md:h-[510px]', 'xl:h-[89vh]')}>
+              <CustomImage src={item.src} alt={item.title} />
             </div>
           </SwiperSlide>
         )
@@ -75,4 +68,4 @@ const HomeSlider = () => {
   )
 }
 
-export default HomeSlider
+export default ProductSlider

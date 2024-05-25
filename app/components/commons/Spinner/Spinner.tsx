@@ -7,7 +7,11 @@ type Props = {
   width: string
 }
 
-const Spinner = (props: Props) => {
+const Spinner = ({
+  color = 'fill-white',
+  width = 'w-4',
+  height = 'h-4'
+}: Props) => {
   return (
     <svg
       role='status'
@@ -45,12 +49,6 @@ const Spinner = (props: Props) => {
       />
     </svg>
   )
-}
-
-Spinner.defaultProps = {
-  color: 'fill-white',
-  width: 'w-4',
-  height: 'h-4'
 }
 
 export default Spinner

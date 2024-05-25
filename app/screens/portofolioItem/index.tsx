@@ -1,7 +1,7 @@
 import cx from 'classnames'
-import {Portofolio, HomeSlider} from '@/app/screens/home/sections'
+import {Portofolio, ProductSlider} from '@/app/screens/home/sections'
 
-const PortofolioPage = () => {
+const PortofolioItem = () => {
   return (
     <div className={cx('bg-secondary/20 pt-20 3xl:flex 3xl:justify-center')}>
       <div
@@ -14,7 +14,7 @@ const PortofolioPage = () => {
         </span>
         <div className={cx('flex items-center justify-center ')}>
           <div className={cx('w-[60vw] scale-90 overflow-hidden rounded-xl border-4 border-white')}>
-            <HomeSlider />
+            <ProductSlider />
           </div>
           <div className={cx('w-[30vw] rounded-xl bg-white p-6 text-sm')}>
             <span className={cx('text-2xl font-extrabold leading-none tracking-tight')}>About</span>
@@ -60,4 +60,4 @@ const PortofolioPage = () => {
   )
 }
 
-export default PortofolioPage
+export default PortofolioItem

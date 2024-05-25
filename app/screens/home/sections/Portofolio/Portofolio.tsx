@@ -48,13 +48,9 @@ const Product = () => {
                     'cursor-pointer overflow-hidden rounded-2xl brightness-50 transition hover:brightness-100'
                   )}
                 >
-                  <Link href={{pathname: '/portofolio', query: {keyword: index}}}>
+                  <Link href={`/portofolio/${index}`}>
                     <div className='transition hover:scale-110'>
-                      <CustomImage
-                        className={cx('h-96 w-full object-cover  md:h-auto md:w-48')}
-                        src={ICHomeSlider2}
-                        alt={'img'}
-                      />
+                      <CustomImage src={ICHomeSlider2} alt={'img'} />
                     </div>
                   </Link>
                 </div>
@@ -73,7 +69,7 @@ const Product = () => {
           </div>
         </div>
         {router.pathname.split('/')[1] !== 'portofolio' && (
-          <Link href={{pathname: '/portofolio', query: {keyword: 'this way'}}}>
+          <Link href={{pathname: '/portofolio'}}>
             <Button type='button' variant='medium' classType='outline-primary'>
               Read More ...
             </Button>
